@@ -1,6 +1,11 @@
 pypicloud-tools
 ===============
-
+Fork Notes
+----------
+This fork modifies the tools in the following way:
+    * removes the credentials from .pypirc file so they are set via .aws/credentials in line with other tools
+    * takes AWS region as a config parameter (required) to allow for connection to GovCloud
+    
 `View this on GitHub
 Pages <http://ccpgames.github.io/pypicloud-tools/>`__
 
@@ -143,8 +148,7 @@ it must be in the same syntax. That syntax is:
         username:admin
         password:hunter7
         bucket:your_bucket
-        access:some_key
-        secret:other_key
+        region: aws_region
         acl:optional_acl
 
 The key **must** be ``pypicloud``, it is the only key pypicloud-tools
